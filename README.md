@@ -1,11 +1,10 @@
 # Smart Home System 📱 
----
 
 ## 📋 Project Overview
 
 This project aims to develop a **remote smart control solution** that integrates **embedded electronic circuits** with a **mobile application**. The system provides **real-time monitoring**, **remote control**, and **seamless connectivity** between hardware components and cloud-based services using **Firebase** and **SQLite**.
 
----
+
 
 ## 🛠️ Hardware Requirements
 
@@ -22,7 +21,7 @@ This project aims to develop a **remote smart control solution** that integrates
 - LCD 🖥️
 - Keypad 🔢
 
----
+
 
 ## 📱 Mobile Application Features
 
@@ -44,7 +43,7 @@ This project aims to develop a **remote smart control solution** that integrates
 - **Profile**: Displays user profile with logout functionality.
 - **Logout**: Logs out and returns to the login form.
 
----
+
 
 ## 🏡 Smart Home Features
 
