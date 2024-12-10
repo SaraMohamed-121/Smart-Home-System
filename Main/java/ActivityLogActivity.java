@@ -1,6 +1,10 @@
-package com.example.vvvvv;
+package com.example.project;
+
+import static com.example.project.HomeActivity.logList;
 
 import android.os.Bundle;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -8,17 +12,24 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class ActivityLogActivity extends AppCompatActivity {
+import org.checkerframework.checker.units.qual.A;
 
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Calendar;
+
+public class ActivityLogActivity extends AppCompatActivity {
+    ListView listView;
+    ArrayList<String> list = new ArrayList<>();
+    ArrayList<String> list2 = new ArrayList<>();
+    ArrayAdapter<String>adapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_log);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
+        list = logList;
+        listView = findViewById(R.id.logs);
+        adapter = new ArrayAdapter<>(getApplicationContext(), android.R.layout.simple_list_item_1, list);
+        listView.setAdapter(adapter);
     }
 }

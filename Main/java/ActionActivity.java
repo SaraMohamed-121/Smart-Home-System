@@ -1,4 +1,4 @@
-package com.example.vvvvv;
+package com.example.project;
 
 import android.os.Bundle;
 import android.widget.TextView;

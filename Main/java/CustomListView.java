@@ -1,4 +1,4 @@
-package com.example.vvvvv;
+package com.example.project;
 
 
 import android.os.Bundle;
@@ -16,6 +16,5 @@ public class CustomListView extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main2);
-
     }
 }
