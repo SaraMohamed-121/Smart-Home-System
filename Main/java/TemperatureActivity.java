@@ -1,6 +1,8 @@
 package com.example.project;
 import static com.example.project.HomeActivity.logList;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
 import com.google.firebase.analytics.FirebaseAnalytics;
@@ -41,5 +43,12 @@ public class TemperatureActivity extends AppCompatActivity {
                 tempValue.setText("Error loading data");
             }
         });
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        startActivity(new Intent(this, HomeActivity.class));
+        finish();
     }
 }

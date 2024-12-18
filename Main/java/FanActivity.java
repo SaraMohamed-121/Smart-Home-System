@@ -3,6 +3,8 @@ package com.example.project;
 import static com.example.project.HomeActivity.logList;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ToggleButton;
 
@@ -57,5 +59,12 @@ public class FanActivity extends AppCompatActivity {
 
         // Set up listener to update Firebase when the ToggleButton state changes
         fanToggle.setOnCheckedChangeListener((buttonView, isChecked) -> fanRef.setValue(isChecked));
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        startActivity(new Intent(this, HomeActivity.class));
+        finish();
     }
 }

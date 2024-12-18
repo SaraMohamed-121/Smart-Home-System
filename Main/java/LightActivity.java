@@ -2,6 +2,8 @@ package com.example.project;
 
 import static com.example.project.HomeActivity.logList;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Switch;
 import com.google.firebase.analytics.FirebaseAnalytics;
@@ -50,4 +52,12 @@ public class LightActivity extends AppCompatActivity {
         });
         lightSwitch.setOnCheckedChangeListener((buttonView, isChecked) -> lightRef.setValue(isChecked));
     }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        startActivity(new Intent(this, HomeActivity.class));
+        finish();
+    }
+
 }

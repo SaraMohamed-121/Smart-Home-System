@@ -2,6 +2,7 @@ package com.example.project;
 
 import static com.example.project.HomeActivity.logList;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
@@ -33,5 +34,12 @@ public class ActivityLogActivity extends AppCompatActivity {
         listView = findViewById(R.id.logs);
         adapter = new ArrayAdapter<>(getApplicationContext(), android.R.layout.simple_list_item_1, list);
         listView.setAdapter(adapter);
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        startActivity(new Intent(this, HomeActivity.class));
+        finish();
     }
 }

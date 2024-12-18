@@ -2,6 +2,7 @@ package com.example.project;
 
 import static com.example.project.HomeActivity.logList;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -49,5 +50,12 @@ public class LcdActivity extends AppCompatActivity {
                 lcdTxt.setText("");
             }
         });
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        startActivity(new Intent(this, HomeActivity.class));
+        finish();
     }
 }

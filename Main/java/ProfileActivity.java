@@ -28,4 +28,11 @@ public class ProfileActivity extends AppCompatActivity {
         name.setText(nameVal);
         username.setText(usernameVal);
     }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        startActivity(new Intent(this, HomeActivity.class));
+        finish();
+    }
 }
