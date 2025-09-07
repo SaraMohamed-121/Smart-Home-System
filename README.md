@@ -15,11 +15,11 @@ This project aims to develop a **remote smart control solution** that integrates
 - ESP8266NodeMCU / Arduino Uno + ESP8266 WiFi Module
 
 ### Application-Specific Components:
-- LM35 Temperature Sensor 🌡️
-- Ultrasonic Sensor 📏
-- DC Motor 🔄
-- LCD 🖥️
-- Keypad 🔢
+- LM35 Temperature Sensor 
+- Ultrasonic Sensor 
+- DC Motor 
+- LCD 
+- Keypad 
 
 
 
